@@ -1,4 +1,4 @@
-# * Azure Virtual Desktop Home Lab Project*
+# Azure Virtual Desktop Home Lab Project
 
 This is a manually deployed Azure Virtual Desktop (AVD) environment designed for small-to-medium organisation built from scratch using the Azure portal. The goal was to gain deep, hands-on experience with the core components and configuration process of AVD. 
 
