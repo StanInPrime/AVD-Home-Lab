@@ -5,7 +5,9 @@ This is a manually deployed Azure Virtual Desktop (AVD) environment designed for
 The project also incorporates key enterprise concepts like Conditional Access, FSLogix profile containers, Entra ID integration, Networking, Image configuration and RemoteApp delivery. During the process of implementation I have picked up knowledge of its architecture and use cases through exposure in my current role.
 
 
-**Azure Landing Zone**
+# **Azure Landing Zone**
+
+
 Before deploying any resources, I carefully planned the structure of the project by designing an architecture diagram. This served as a foundational blueprint for organising core components and visualising how services like AVD, FSLogix, and Entra ID would interact. The planning was inspired by the principles of an Azure Landing Zone—focusing on governance, network layout, identity, and scalability—even though the environment was manually deployed. This step ensured a smoother configuration process and gave me clarity on how to scale the setup in future iterations.
 
 -- Diagram -- 
