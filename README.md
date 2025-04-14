@@ -5,9 +5,6 @@ This is a manually deployed Azure Virtual Desktop (AVD) environment designed for
 The project also incorporates key enterprise concepts like Conditional Access, FSLogix profile containers, Entra ID integration, Networking, Image configuration and RemoteApp delivery. During the process of implementation I have picked up knowledge of its architecture and use cases through exposure in my current role.
 
 
-# **Azure Landing Zone**
-
-
 Before deploying any resources, I carefully planned the structure of the project by designing an architecture diagram. This served as a foundational blueprint for organising core components and visualising how services like AVD, FSLogix, and Entra ID would interact. The planning was inspired by the principles of an Azure Landing Zone—focusing on governance, network layout, identity, and scalability—even though the environment was manually deployed. This step ensured a smoother configuration process and gave me clarity on how to scale the setup in future iterations.
 
 -- Diagram -- 
@@ -25,7 +22,6 @@ Before deploying any resources, I carefully planned the structure of the project
 - Azure Virtual Network (VNet)
 - Windows 10/11 Multi-Session Host (AVD Optimized Image)
 
-![image](https://github.com/user-attachments/assets/3b4922ba-5faf-4ffd-9b5f-177d800eeb2c)
 
 
 **Resource Groups structure**
@@ -33,39 +29,51 @@ Before deploying any resources, I carefully planned the structure of the project
 
 **1. Microsoft 365 & Entra ID Setup**
 - Configured and assigned a custom domain to the tenant
-- M365 Business Premium trial
+- M365 Business Premium license
 - Created 10 test users | using Mockaroo random data generator 
 - Assigned licenses via group-based licensing
 - Enforced MFA with Conditional Access
 - Configured profile and Office containers in FSLogix
 
-![Uploading image.png…]()
 
+User list
+![image](https://github.com/user-attachments/assets/192ce179-745d-4111-aa7c-ab89297f6721)
 
-##Image
+CA Policy
+![image](https://github.com/user-attachments/assets/8574e1d9-34c8-4390-91ff-4cd253dbb7d0)
+
 
 **2. Networking**
-- One VNet with multiple subnet (Fs logix storage, VM and Bastion) 
+- First VNet with multiple subnet (Fs logix storage, VM and Bastion) 
 - Second Vnet for hub-and-spoke network architecture
 
 **3. Storage Configuration**
-- Created a Premium Azure File Share for FSLogix
-- Enabled Active Directory authentication via Entra ID
-- Applied proper NTFS permissions for user profile containers
+- Created Azure File Share for FSLogix
 - Attached storage account to session hosts using appropriate access keys
+
+![image](https://github.com/user-attachments/assets/238aa00e-5a59-4a45-9361-187ca8580f8f)
+
 
 **4. AVD Configuration**
 - Created a pooled host pool
 - Registered session hosts with the host pool
 - Created a desktop application group
 - Assigned users via Entra ID groups
-- Implemented Feed URL 
+- Implemented Feed URL for faster workspace resolution
 - Configured Azure Bastion for secure access to the session hosts
+
+Host pools + Sessions hosts
+![image](https://github.com/user-attachments/assets/df29f7b4-d466-4d52-b8f2-3eeb5ebc2643)
+
+
+Feed URL
+![image](https://github.com/user-attachments/assets/77abb9de-f890-400e-8630-fee0a69f411e)
+
 
 **5. FSLogix Setup**
 - Installed FSLogix on session hosts
 - Used registry-based configuration
-- Configured a premium Azure Files share
+- Configured Azure Files share
 - Enabled identity-based access for users
 
 **6. RemoteApp Deployment**
@@ -80,9 +88,18 @@ MSIX app attach to do.
 - Capture the image to a managed image in the same region
 - Stored in Compute Gallery
 
+![image](https://github.com/user-attachments/assets/aa634a60-e389-4f61-9060-c59b6feba960)
+
+
+## All resources used
+
+![image](https://github.com/user-attachments/assets/a6e16f2f-ac5b-4cce-aa05-6c94cd0ff085)
+
+
+
 **KEY Learning**
 
-Developed an Azure Landing Zone utilizing Terraform, showcasing my proficiency in cloud architecture
+Developed an Azure Virtual Desktop Environment 
 Gained solid hands-on experience with Azure Virtual Desktop and its dependencies
 Understood the end-to-end setup process without relying on automation
 Learned how Conditional Access policies interact with AVD authentication flow
