@@ -35,12 +35,10 @@ Before deploying any resources, I carefully planned the structure of the project
 - Enforced MFA with Conditional Access
 - Configured profile and Office containers in FSLogix
 
-
 User list
 
 
 ![image](https://github.com/user-attachments/assets/192ce179-745d-4111-aa7c-ab89297f6721)
-
 CA Policy
 
 
