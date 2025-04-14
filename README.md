@@ -25,6 +25,9 @@ Before deploying any resources, I carefully planned the structure of the project
 - Azure Virtual Network (VNet)
 - Windows 10/11 Multi-Session Host (AVD Optimized Image)
 
+![image](https://github.com/user-attachments/assets/3b4922ba-5faf-4ffd-9b5f-177d800eeb2c)
+
+
 **Resource Groups structure**
 
 
@@ -35,6 +38,9 @@ Before deploying any resources, I carefully planned the structure of the project
 - Assigned licenses via group-based licensing
 - Enforced MFA with Conditional Access
 - Configured profile and Office containers in FSLogix
+
+![Uploading image.png…]()
+
 
 ##Image
 
