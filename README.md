@@ -37,9 +37,13 @@ Before deploying any resources, I carefully planned the structure of the project
 
 
 User list
+
+
 ![image](https://github.com/user-attachments/assets/192ce179-745d-4111-aa7c-ab89297f6721)
 
 CA Policy
+
+
 ![image](https://github.com/user-attachments/assets/8574e1d9-34c8-4390-91ff-4cd253dbb7d0)
 
 
@@ -63,10 +67,14 @@ CA Policy
 - Configured Azure Bastion for secure access to the session hosts
 
 Host pools + Sessions hosts
+
+
 ![image](https://github.com/user-attachments/assets/df29f7b4-d466-4d52-b8f2-3eeb5ebc2643)
 
 
 Feed URL
+
+
 ![image](https://github.com/user-attachments/assets/77abb9de-f890-400e-8630-fee0a69f411e)
 
 
@@ -92,6 +100,7 @@ MSIX app attach to do.
 
 
 ## All resources used
+
 
 ![image](https://github.com/user-attachments/assets/a6e16f2f-ac5b-4cce-aa05-6c94cd0ff085)
 
