@@ -7,9 +7,6 @@ The project also incorporates key enterprise concepts like Conditional Access, F
 
 Before deploying any resources, I carefully planned the structure of the project by designing an architecture diagram. This served as a foundational blueprint for organising core components and visualising how services like AVD, FSLogix, and Entra ID would interact. The planning was inspired by the principles of an Azure Landing Zone—focusing on governance, network layout, identity, and scalability—even though the environment was manually deployed. This step ensured a smoother configuration process and gave me clarity on how to scale the setup in future iterations.
 
--- Diagram -- 
-  
-
 
 **Technologies used**
 - 365 Admin Center
