@@ -1,0 +1,47 @@
+✅ AVD Layer
+You can modularize this or keep it flat depending on complexity. Recommended resources:
+
+azurerm_virtual_desktop_host_pool
+
+azurerm_virtual_desktop_application_group
+
+azurerm_virtual_desktop_workspace
+
+azurerm_virtual_desktop_workspace_application_group_association
+
+azurerm_role_assignment (for access control, especially for users)
+
+azurerm_virtual_machine (for session hosts)
+
+✅ Compute Layer
+For VMs (session hosts), define:
+
+azurerm_windows_virtual_machine (or Linux variant)
+
+Add extensions like azurerm_virtual_machine_extension for FSLogix, domain jo
+
+
+
+module "compute" {
+  source              = "./modules/compute"
+  vm_name             = local.vm_name
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = local.location
+  subnet_id           = module.network.subnet_id
+  uai_id              = module.identity.uai_id
+  tags                = local.tags
+}
+
+module "storage" {
+  source              = "./modules/storage"
+  storage_account_name = local.storage_account_name
+  resource_group_name = azurerm_resource_group.rg.name
+  location            = local.location
+  tags                = local.tags
+}
+
+  ## Storage
+  storage_name = "${local.prefix}-storage-${local.environment}-${local.location}-${random_integer.suffix.result}"
+  account_tier = "Standard"
+  account_replication_type = "LRS"
+  file_share_name = "FSLogix"
