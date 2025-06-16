@@ -1,7 +1,7 @@
 ## ignore this files
 
-notes.txt
 .terraform.lock.hcl
 .terraform/
 locals.tf 
 .terraform/terraform.tfstate 
+environmentvariables.ps1
