@@ -3,5 +3,6 @@
 notes.txt
 environmentvariables.ps1
 .terraform.lock.hcl
-.terraform
+.terraform/
 locals.tf 
+

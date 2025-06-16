@@ -21,6 +21,15 @@ azurerm_windows_virtual_machine (or Linux variant)
 Add extensions like azurerm_virtual_machine_extension for FSLogix, domain jo
 
 
+remote: error: Trace: c801f692246452d4940d9ea3bd99601ca3b4f79fb3c31919bb441e8fb32928e4
+remote: error: See https://gh.io/lfs for more information.
+remote: error: File .terraform/providers/registry.terraform.io/hashicorp/azurerm/4.29.0/windows_386/terraform-provider-azurerm_v4.29.0_x5.exe is 206.81 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: File .terraform/providers/registry.terraform.io/hashicorp/azurerm/4.33.0/windows_386/terraform-provider-azurerm_v4.33.0_x5.exe is 207.16 MB; this exceeds GitHub's file size limit of 100.00 MB
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.
+To https://github.com/StanInPrime/AVD-Home-Lab
+ ! [remote rejected] main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/StanInPrime/AVD-Home-Lab'
+
 
 module "compute" {
   source              = "./modules/compute"
